@@ -1,7 +1,7 @@
 import "./styles/index.scss";
 const element = document.getElementById("body");
 const themeDots = document.getElementsByClassName("theme-dot");
-const theme = localStorage.getItem("theme");
+const theme = sessionStorage.getItem("theme");
 if (theme == null) {
 	setTheme("light");
 } else {
@@ -20,5 +20,5 @@ function setTheme(mode) {
 	if (mode == "blue") element.className = "blue_theme";
 	if (mode == "green") element.className = "green_theme";
 	if (mode == "purple") element.className = "purple_theme";
-	localStorage.setItem("theme", mode);
+	sessionStorage.setItem("theme", mode);
 }

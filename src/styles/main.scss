@@ -1,5 +1,5 @@
 :root {
-	--mainColor: #eaeaea;
+	--mainColor: peaeaea;
 	--secondaryColor: #fff;
 
 	--borderColor: #c1c1c1;
@@ -174,16 +174,14 @@ h6 {
 	grid-area: left-column;
 	padding-top: 50px;
 	padding-bottom: 50px;
+	text-align: center;
 }
 
 #profile_pic {
-	display: block;
-	margin: 0 auto;
-
-	height: 200px;
+	margin-bottom: 10px;
 	width: 200px;
-	object-fit: cover;
-	border: 2px solid var(--borderColor);
+	border-radius: 7%;
+	aspect-ratio: 1/1;
 }
 
 #theme-options-wrapper {
@@ -244,6 +242,7 @@ h6 {
 
 #preview-shadow {
 	background-color: var(--previewShadow);
+	border-radius: 7%;
 	max-width: 300px;
 	height: 180px;
 	padding-left: 30px;
@@ -295,13 +294,11 @@ h6 {
 	gap: 100px;
 }
 
-.main-container div {
-}
-
 #skills {
 	display: flex;
 	justify-content: space-evenly;
 	background-color: var(--previewShadow);
+	border-radius: 1%;padding: 10px 0;
 }
 
 .social-links {
@@ -323,7 +320,6 @@ h6 {
 }
 
 .post {
-	border: 1px solid var(--borderColor);
 	-webkit-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
 	box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
@@ -333,7 +329,7 @@ h6 {
 	display: block;
 	width: 100%;
 	height: 180px;
-	object-fit: fill;
+	object-fit: cover;
 }
 
 .post-preview {
@@ -389,6 +385,7 @@ h6 {
 	color: #fff;
 	background-color: var(--buttonColor);
 	border: none;
+	border-radius: 5px;
 }
 
 @media screen and (max-width: 1200px) {

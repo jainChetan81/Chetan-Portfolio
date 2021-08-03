@@ -1,35 +1,24 @@
 import "./styles/index.scss";
-
-const theme = localStorage.getItem("theme");
-
-// if (theme == null) {
-// 	setTheme("light");
-// } else {
-// 	setTheme(theme);
-// }
-
+const element = document.getElementById("body");
 const themeDots = document.getElementsByClassName("theme-dot");
-
-for (let i = 0; themeDots.length > i; i++) {
-	themeDots[i].addEventListener("click", function () {
-		const mode = this.dataset.mode;
-		console.log("Option clicked:", mode);
-		// setTheme(mode);
-	});
+const theme = localStorage.getItem("theme");
+if (theme == null) {
+	setTheme("light");
+} else {
+	setTheme(theme);
 }
 
-// function setTheme(mode) {
-// 	if (mode == "light") {
-// 		document.getElementById("theme-style").href = "default.css";
-// 	}
-// 	if (mode == "blue") {
-// 		document.getElementById("theme-style").href = "blue.css";
-// 	}
-// 	if (mode == "green") {
-// 		document.getElementById("theme-style").href = "green.css";
-// 	}
-// 	if (mode == "purple") {
-// 		document.getElementById("theme-style").href = "purple.css";
-// 	}
-// 	localStorage.setItem("theme", mode);
-// }
+for (let i = 0; themeDots.length > i; i++) {
+	if (themeDots)
+		themeDots[i].addEventListener("click", function () {
+			setTheme(this.dataset.mode);
+		});
+}
+
+function setTheme(mode) {
+	if (mode == "light") element.className = "light_theme";
+	if (mode == "blue") element.className = "blue_theme";
+	if (mode == "green") element.className = "green_theme";
+	if (mode == "purple") element.className = "purple_theme";
+	localStorage.setItem("theme", mode);
+}

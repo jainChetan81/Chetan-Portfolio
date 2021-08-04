@@ -3,10 +3,12 @@
 	"private": true,
 	"description": "",
 	"main": "index.js",
+    "homepage": "http://jainChetan98.github.io/{repo-name}",
 	"scripts": {
 		"start": "webpack-dev-server  --config webpack.dev.js --open",
 		"build": "webpack --config webpack.prod.js",
-		"predeploy": "npm run build"
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"engines": {
 		"node": "14.17.0",

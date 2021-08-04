@@ -35,6 +35,7 @@
 		"webpack-merge": "^4.2.1"
 	},
 	"devDependencies": {
-		"gh-pages": "^3.2.3"
+		"gh-pages": "^3.2.3",
+		"hint": "^6.1.4"
 	}
 }

@@ -5,7 +5,12 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack-dev-server  --config webpack.dev.js --open",
-		"build": "webpack --config webpack.prod.js"
+		"build": "webpack --config webpack.prod.js",
+		"predeploy": "npm run build"
+	},
+	"engines": {
+		"node": "14.17.0",
+		"npm": "6.14.3"
 	},
 	"keywords": [],
 	"author": "",

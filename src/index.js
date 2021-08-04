@@ -7,7 +7,6 @@ if (theme == null) {
 } else {
 	setTheme(theme);
 }
-
 for (let i = 0; themeDots.length > i; i++) {
 	if (themeDots)
 		themeDots[i].addEventListener("click", function () {

@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html dir="ltr" lang="en">
 	<head>
 		<title>Chetan Portfolio</title>
 		<meta
-			name="viewport"
 			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
+			name="viewport"
 		/>
 		<!-- If you need to support IE9 or IE8 -->
-		<meta http-equiv="x-ua-compatible" content="ie=edge" />
-
+		<meta content="ie=edge" http-equiv="x-ua-compatible" />
 		<meta charset="utf-8" />
-		<meta name="description" content="A portfolio website for Chetan Jain" />
-
+		<meta content="A portfolio website for Chetan Jain" name="description" />
+		<!-- Apple Touch Icon (at least 200x200px) -->
+		<!-- <link rel="apple-touch-icon" href="/custom-icon.png" /> -->
+		<!-- To run web application in full-screen -->
+		<meta content="yes" name="apple-mobile-web-app-capable" />
+		<!-- Status Bar Style (see Supported Meta Tags below for available values) -->
+		<!-- Has no effect unless you have the previous meta tag -->
+		<meta content="black" name="apple-mobile-web-app-status-bar-style" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
+
 	<body id="body">
 		<section class="s1">
 			<div class="main-container">
@@ -28,44 +35,57 @@
 					<div class="nav-wrapper">
 						<a href="index.html">
 							<div class="dots-wrapper">
-								<div id="dot-1" class="browser-dot"></div>
-								<div id="dot-2" class="browser-dot"></div>
-								<div id="dot-3" class="browser-dot"></div>
-							</div>
-						</a>
+								<div class="browser-dot" id="dot-1"></div>
+
+								<div class="browser-dot" id="dot-2"></div>
+
+								<div class="browser-dot" id="dot-3"></div></div
+						></a>
 
 						<ul id="navigation">
-							<li><a href="index.html#contact">Contact</a></li>
+							<li>
+								<a href="index.html#contact">Contact</a>
+							</li>
 						</ul>
 					</div>
 
 					<div class="left-column">
-						<img id="profile_pic" src="images/ChetanId.jpg" alt="chetan profile pic" />
+						<img alt="chetan profile pic" id="profile_pic" src="images/ChetanId.jpg" />
+
 						<h5 style="text-align: center; line-height: 0">Personalize Theme</h5>
 
 						<div id="theme-options-wrapper">
-							<div data-mode="light" id="light-mode" class="theme-dot"></div>
-							<div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-							<div data-mode="green" id="green-mode" class="theme-dot"></div>
-							<div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+							<div class="theme-dot" data-mode="light" id="light-mode"></div>
+
+							<div class="theme-dot" data-mode="blue" id="blue-mode"></div>
+
+							<div class="theme-dot" data-mode="green" id="green-mode"></div>
+
+							<div class="theme-dot" data-mode="purple" id="purple-mode"></div>
 						</div>
 
 						<p id="settings-note">
-							*Theme settings will be saved for<br />your next vist
+							*Theme settings will be saved for<br />
+							your next vist
 						</p>
 					</div>
 
 					<div class="right-column">
 						<div id="preview-shadow">
 							<div id="preview">
-								<div id="corner-tl" class="corner"></div>
-								<div id="corner-tr" class="corner"></div>
+								<div class="corner" id="corner-tl"></div>
+
+								<div class="corner" id="corner-tr"></div>
+
 								<h3>What I AM</h3>
+
 								<p>
 									A Full Stack web developer with experience in mobile Development
 								</p>
-								<div id="corner-br" class="corner"></div>
-								<div id="corner-bl" class="corner"></div>
+
+								<div class="corner" id="corner-br"></div>
+
+								<div class="corner" id="corner-bl"></div>
 							</div>
 						</div>
 					</div>
@@ -98,45 +118,50 @@
 
 						<p>
 							Fullstack developer with primary focus on Node + React:
-							<a href="chetan-resume.pdf" download>Download Resume</a>
+							<a href="chetan-resume.pdf">Download Resume</a>
 						</p>
 
 						<div id="skills">
 							<ul>
 								<li>HTML5 / CSS3/ SASS</li>
+
 								<li>JavaScript</li>
+
 								<li>TypeScript</li>
+
 								<li>NodeJS</li>
+
 								<li>Git</li>
 							</ul>
 
 							<ul>
 								<li>Webpack</li>
+
 								<li>React</li>
+
 								<li>Angular</li>
+
 								<li>Redux.js, Context API</li>
+
 								<li>MySql, MongoDB, DynamoDB</li>
 							</ul>
 						</div>
 					</div>
 
 					<div class="social-links">
-						<img id="social_img" src="images/follow.png" alt="Follow" />
-						<h3>Find me on Github & LinkedIn</h3>
+						<img alt="Follow" id="social_img" src="images/follow.png" />
 
-						<a target="_blank" href="https://github.com/jainChetan81" rel="noopner"
+						<h3>Find me on Github & LinkedIn</h3>
+						<a href="https://github.com/jainChetan81" rel="noopner" target="_blank"
 							>Github: @jainChetan81</a
-						>
-						<br />
+						><br />
 						<a
-							target="_blank"
 							href="https://www.linkedin.com/in/chetanjain81/"
 							rel="noopner"
+							target="_blank"
 							>LinkedIn: @chetanjain81</a
-						>
-						<br />
-						<a>Mob: 8700776723</a>
-						<br />
+						><br />
+						<a>Mob: 8700776723</a><br />
 						<a>Email: jain.cj.chetan@gmail.com</a>
 					</div>
 				</div>
@@ -150,9 +175,11 @@
 				<div class="post-wrapper">
 					<div>
 						<div class="post">
-							<img class="thumbnail" src="images/burger/burger.png" alt="burger" />
+							<img alt="burger" class="thumbnail" src="images/burger/burger.png" />
+
 							<div class="post-preview">
 								<h6 class="post-title">Burger Builder</h6>
+
 								<p class="post-intro">
 									An Online Delivery app for a single Burger Restraunt for great
 									user experience
@@ -165,12 +192,14 @@
 					<div>
 						<div class="post">
 							<img
+								alt="ecommerce"
 								class="thumbnail"
 								src="images/ecommerce/ecom.png"
-								alt="ecommerce"
 							/>
+
 							<div class="post-preview">
 								<h6 class="post-title">Online Store - Ecommerce</h6>
+
 								<p class="post-intro">
 									Online store with MyCart intergration and amazing user shopping
 									experience
@@ -182,9 +211,11 @@
 
 					<div>
 						<div class="post">
-							<img class="thumbnail" src="images/emaily/emaily.png" alt="emaily" />
+							<img alt="emaily" class="thumbnail" src="images/emaily/emaily.png" />
+
 							<div class="post-preview">
 								<h6 class="post-title">Emaily</h6>
+
 								<p class="post-intro">
 									An online portal for Creating and sending your own surveys with
 									stripe integration
@@ -193,11 +224,14 @@
 							</div>
 						</div>
 					</div>
+
 					<div>
 						<div class="post">
-							<img class="thumbnail" src="images/devchat/devchat.png" alt="devchat" />
+							<img alt="devchat" class="thumbnail" src="images/devchat/devchat.png" />
+
 							<div class="post-preview">
 								<h6 class="post-title">DevChat</h6>
+
 								<p class="post-intro">
 									A Slack clone where users can create channels or have direct
 									conversation
@@ -206,11 +240,14 @@
 							</div>
 						</div>
 					</div>
+
 					<div>
 						<div class="post">
-							<img class="thumbnail" src="images/news/news.png" alt="news" />
+							<img alt="news" class="thumbnail" src="images/news/news.png" />
+
 							<div class="post-preview">
 								<h6 class="post-title">News</h6>
+
 								<p class="post-intro">
 									An online portal for customizable News Feed with realtime search
 									option
@@ -219,11 +256,14 @@
 							</div>
 						</div>
 					</div>
+
 					<div>
 						<div class="post">
-							<img class="thumbnail" src="images/covid19/covid.png" alt="covid" />
+							<img alt="covid" class="thumbnail" src="images/covid19/covid.png" />
+
 							<div class="post-preview">
 								<h6 class="post-title">Covid-19 Tracker</h6>
+
 								<p class="post-intro">
 									An Website to track daily and total Covid 19 cases Globally or
 									at your country
@@ -240,17 +280,12 @@
 			<div class="main-container">
 				<h3 style="text-align: center">Get In Touch</h3>
 
-				<form id="contact-form">
-					<label>Name</label>
-					<input class="input-field" type="text" name="name" />
-
-					<label>Subject</label>
-					<input class="input-field" type="text" name="subject" />
-
-					<label>Email</label>
-					<input class="input-field" type="email" name="email" />
-
+				<form id="contact-form" name="contact-form">
+					<label>Name</label> <input class="input-field" name="name" type="text" />
+					<label>Subject</label> <input class="input-field" name="subject" type="text" />
+					<label>Email</label> <input class="input-field" name="email" type="email" />
 					<label>Message</label>
+
 					<textarea class="input-field" name="message"></textarea>
 					<input id="submit-btn" type="submit" value="Send" />
 				</form>

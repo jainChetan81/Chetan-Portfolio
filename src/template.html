@@ -31,7 +31,7 @@
 
 				<div class="intro-wrapper">
 					<div class="nav-wrapper">
-						<a href="index.html">
+						<a aria-label="Chetan Portfolio Home Page">
 							<div class="dots-wrapper">
 								<div class="browser-dot" id="dot-1"></div>
 
@@ -42,7 +42,7 @@
 
 						<ul id="navigation">
 							<li>
-								<a href="index.html#contact">Contact</a>
+								<a href="#contact" aria-label="Chetan Portfolio Contact">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -116,7 +116,11 @@
 
 						<p>
 							Fullstack developer with primary focus on Node + React:
-							<a href="chetan-resume.pdf" target="_blank" rel="noopener"
+							<a
+								href="chetan-resume.pdf"
+								target="_blank"
+								rel="noopener"
+								aria-label="Chetan Resume PDF"
 								>Download Resume</a
 							>
 						</p>
@@ -152,17 +156,26 @@
 						<img alt="Follow" id="social_img" src="images/follow.png" />
 
 						<h3>Find me on Github & LinkedIn</h3>
-						<a href="https://github.com/jainChetan81" rel="noopner" target="_blank"
+						<a
+							href="https://github.com/jainChetan81"
+							rel="noopner"
+							target="_blank"
+							aria-label="Chetan Github Link"
 							>Github: @jainChetan81</a
 						><br />
 						<a
 							href="https://www.linkedin.com/in/chetanjain81/"
 							rel="noopner"
 							target="_blank"
+							aria-label="Chetan Linkedin Link"
 							>LinkedIn: @chetanjain81</a
 						><br />
-						<a>Mob: 8700776723</a><br />
-						<a>Email: jain.cj.chetan@gmail.com</a>
+						<a aria-label="Chetan Mobile Number" href="tel:+918700776723"
+							>Mob: +918700776723</a
+						><br />
+						<a href="mailto:jain.cj.chetan@gmail.com" aria-label="Chetan Email Id"
+							>Email: jain.cj.chetan@gmail.com</a
+						>
 					</div>
 				</div>
 			</div>
@@ -184,7 +197,9 @@
 									An Online Delivery app for a single Burger Restraunt for great
 									user experience
 								</p>
-								<a href="burger.html">Read More</a>
+								<a aria-label="Chetan Burger Project" href="burger.html"
+									>Read More</a
+								>
 							</div>
 						</div>
 					</div>
@@ -204,7 +219,9 @@
 									Online store with MyCart intergration and amazing user shopping
 									experience
 								</p>
-								<a href="ecommerce.html">Read More</a>
+								<a aria-label="Chetan Ecommerce Project" href="ecommerce.html"
+									>Read More</a
+								>
 							</div>
 						</div>
 					</div>
@@ -236,7 +253,9 @@
 									A Slack clone where users can create channels or have direct
 									conversation
 								</p>
-								<a href="devchat.html">Read More</a>
+								<a aria-label="Chetan Slack Clone Project" href="devchat.html"
+									>Read More</a
+								>
 							</div>
 						</div>
 					</div>
@@ -268,7 +287,9 @@
 									An Website to track daily and total Covid 19 cases Globally or
 									at your country
 								</p>
-								<a href="covid19.html">Read More</a>
+								<a aria-label="Chetan Covid 19 Project" href="covid19.html"
+									>Read More</a
+								>
 							</div>
 						</div>
 					</div>
@@ -281,13 +302,26 @@
 				<h3 style="text-align: center">Get In Touch</h3>
 
 				<form id="contact-form" name="contact-form">
-					<label>Name</label> <input class="input-field" name="name" type="text" />
-					<label>Subject</label> <input class="input-field" name="subject" type="text" />
-					<label>Email</label> <input class="input-field" name="email" type="email" />
+					<label>Name</label>
+					<input class="input-field" name="name" placeholder="Chetan Jain" type="text" />
+					<label>Subject</label>
+					<input class="input-field" name="subject" placeholder="Subject" type="text" />
+					<label>Email</label>
+					<input
+						class="input-field"
+						name="email"
+						placeholder="jain.cj.chetan@gmail.com"
+						type="email"
+					/>
 					<label>Message</label>
 
-					<textarea class="input-field" name="message"></textarea>
-					<input id="submit-btn" type="submit" value="Send" />
+					<textarea
+						class="input-field"
+						name="message"
+						placeholder="Message"
+						rows="3"
+					></textarea>
+					<input id="submit-btn" type="submit" value="Send" aria-label="Send" />
 				</form>
 			</div>
 		</section>

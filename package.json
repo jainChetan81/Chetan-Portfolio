@@ -3,7 +3,7 @@
 	"private": true,
 	"description": "Portfolio for chetan jain",
 	"main": "index.js",
-	"homepage": "http://jainChetan98.github.io/Chetan-Portfolio",
+	"homepage": "http://jainChetan81.github.io/Chetan-Portfolio",
 	"scripts": {
 		"start": "webpack-dev-server  --config webpack.dev.js --open",
 		"build": "webpack --config webpack.prod.js",

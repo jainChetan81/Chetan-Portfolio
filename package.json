@@ -33,6 +33,7 @@
 		"webpack-merge": "^4.2.1"
 	},
 	"dependencies": {
+		"@popperjs/core": "^2.9.3",
 		"clean-webpack-plugin": "^2.0.0",
 		"popper": "^1.0.1"
 	}

@@ -6,16 +6,16 @@ addEventListener("message", (event) => {
 	}
 });
 
-const staticDevCoffee = "chetan-jain-portfolio";
-const assets = ["/", "/template.html", "/0.css", "/imgs/*"];
+// const staticDevCoffee = "chetan-jain-portfolio";
+// const assets = ["/", "/template.html", "/0.css", "/imgs/*"];
 
-self.addEventListener("install", (installEvent) => {
-	installEvent.waitUntil(
-		caches.open(staticDevCoffee).then((cache) => {
-			cache.addAll(assets);
-		})
-	);
-});
+// self.addEventListener("install", (installEvent) => {
+// 	installEvent.waitUntil(
+// 		caches.open(staticDevCoffee).then((cache) => {
+// 			cache.addAll(assets);
+// 		})
+// 	);
+// });
 
 //? This will set up dynamic caching for any request URL that matches the URL https://api.exchangeratesapi.io/latest.
 // workbox.routing.registerRoute(

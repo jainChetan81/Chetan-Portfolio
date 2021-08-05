@@ -43,12 +43,13 @@ if ("serviceWorker" in navigator) {
 				});
 			});
 
-			wb.register();
+			try {
+				wb.register();
+			} catch (error) {}
 		}
 	});
 }
 
 // TODO:add email functonality and add a popup when email is sent
 //TODO: add a carousel for projects showcase
-//TODO:PWA
 //TODO: pdf download button working

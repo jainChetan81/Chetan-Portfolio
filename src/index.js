@@ -1,3 +1,4 @@
+import { Workbox } from "workbox-window";
 import "./styles/index.scss";
 const element = document.getElementById("body");
 const themeDots = document.getElementsByClassName("theme-dot");
@@ -24,14 +25,24 @@ function setTheme(mode) {
 
 if ("serviceWorker" in navigator) {
 	window.addEventListener("load", () => {
-		navigator.serviceWorker
-			.register("/service-worker.js")
-			.then((registration) => {
-				console.log("SW registered: ", registration);
-			})
-			.catch((registrationError) => {
-				console.log("SW registration failed: ", registrationError);
+		const wb = new Workbox("/service-worker.js");
+		const updateButton = document.querySelector("#app-update");
+		// Fires when the registered service worker has installed but is waiting to activate.
+		wb.addEventListener("waiting", () => {
+			updateButton.classList.add("show");
+			updateButton.addEventListener("click", () => {
+				// Set up a listener that will reload the page as soon as the previously waiting service worker has taken control.
+				wb.addEventListener("controlling", () => {
+					window.location.reload();
+				});
+
+				// Send a message telling the service worker to skip waiting.
+				// This will trigger the `controlling` event handler above.
+				wb.messageSW({ type: "SKIP_WAITING" });
 			});
+		});
+
+		wb.register();
 	});
 }
 

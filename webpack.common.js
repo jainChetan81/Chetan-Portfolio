@@ -1,4 +1,4 @@
-const WorkboxPlugin = require("workbox-webpack-plugin");
+const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
 	entry: {
@@ -8,9 +8,11 @@ module.exports = {
 		runtimeChunk: "single",
 	},
 	plugins: [
-		new WorkboxPlugin.GenerateSW({
-			clientsClaim: true,
-			skipWaiting: true,
+		new WorkboxWebpackPlugin.InjectManifest({
+			swSrc: "./src/service-worker.js",
+			swDest: "sw.js",
+			include: [/\.html$/, /\.js$/, /\.css$/, /\.woff2$/, /\.jpg$/, /\.png$/],
+			maximumFileSizeToCacheInBytes: 100 * 1024 * 1024,
 		}),
 	],
 	module: {

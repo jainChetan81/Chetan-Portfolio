@@ -1,5 +1,4 @@
 import emailjs, { init } from "emailjs-com";
-import { Workbox } from "workbox-window";
 import "./styles/index.scss";
 init("user_NCbfVxwteUNCBS2cFVtK0");
 const element = document.getElementById("body");
@@ -47,32 +46,8 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 if ("serviceWorker" in navigator) {
 	window.addEventListener("load", function () {
 		navigator.serviceWorker.register("./service-worker.js");
-		// .then((res) => console.log("service worker registered"))
-		// .catch((err) => console.log("service worker not registered", err));
 	});
 }
-
-// if ("serviceWorker" in navigator) {
-// 	window.addEventListener("load", () => {
-// 		const wb = new Workbox("/service-worker.js");
-// 		if (wb && (wb != null || undefined)) {
-// 			const updateButton = document.querySelector("#app-update");
-// 			// Fires when the registered service worker has installed but is waiting to activate.
-// 			wb.addEventListener("waiting", () => {
-// 				updateButton.classList.add("show");
-// 				updateButton.addEventListener("click", () => {
-// 					// Set up a listener that will reload the page as soon as the previously waiting service worker has taken control.
-// 					wb.addEventListener("controlling", () => {
-// 						window.location.reload();
-// 					});
-// 					// Send a message telling the service worker to skip waiting.This will trigger the `controlling` event handler above.
-// 					wb.messageSW({ type: "SKIP_WAITING" });
-// 				});
-// 			});
-// 			wb.register();
-// 		}
-// 	});
-// }
 
 //TODO: add a carousel for projects showcase
 //TODO: pdf download button working

@@ -11,7 +11,8 @@ module.exports = {
 		new WorkboxWebpackPlugin.InjectManifest({
 			swSrc: "./src/service-worker.js",
 			swDest: "service-worker.js",
-			include: [/\.html$/, /\.js$/, /\.css$/, /\.woff2$/, /\.jpg$/, /\.png$/],
+			include: [/\.html$/, /\.js$/, /\.css$/],
+			// include: [/\.html$/, /\.js$/, /\.css$/, /\.woff2$/, /\.jpg$/, /\.png$/],
 		}),
 	],
 	module: {

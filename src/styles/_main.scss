@@ -308,8 +308,7 @@ h6 {
 
 .thumbnail {
 	display: block;
-	// width: 100%;
-	// height: auto;
+	aspect-ratio: 1.78;
 	object-fit: fill;
 }
 

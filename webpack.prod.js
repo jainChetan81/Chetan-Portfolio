@@ -116,13 +116,13 @@ module.exports = merge(common, {
 		],
 	},
 	plugins: [
-		new CompressionPlugin({
-			algorithm: "gzip",
-			minRatio: 0.8,
-			filename: "[path][base].gz",
-			test: /\.(js|css|html|svg|)$/,
-			deleteOriginalAssets: true,
-		}),
+		// new CompressionPlugin({
+		// 	algorithm: "gzip",
+		// 	minRatio: 0.8,
+		// 	filename: "[name].[contentHash].bundle.gz",
+		// 	test: /\.(js|css|html|svg|)$/,
+		// 	deleteOriginalAssets: true,
+		// }),
 		new MiniCssExtractPlugin({
 			filename: "styles/[name].[contentHash].css",
 			chunkFilename: "[id].css",

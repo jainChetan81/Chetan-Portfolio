@@ -120,7 +120,7 @@ module.exports = merge(common, {
 			algorithm: "gzip",
 			minRatio: 0.8,
 			filename: "[path][base].gz",
-			test: /\.(js|css|html|svg|png|jpe?g|gif)$/,
+			test: /\.(js|css|html|svg|)$/,
 			deleteOriginalAssets: true,
 		}),
 		new MiniCssExtractPlugin({

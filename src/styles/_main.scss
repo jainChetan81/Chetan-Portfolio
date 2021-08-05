@@ -300,6 +300,7 @@ h6 {
 
 .post {
 	box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+	background-color: #fff;
 }
 
 .thumbnail {
@@ -313,6 +314,7 @@ h6 {
 	background-color: #fff;
 	padding-block: 15px;
 	padding-inline: 15px 5px;
+	margin-top: 20px;
 }
 
 .post-title {
@@ -325,6 +327,9 @@ h6 {
 	color: #4b5156;
 	font-size: 14px;
 	margin: 0;
+}
+.post-preview a {
+	color: blue;
 }
 
 #contact-form {

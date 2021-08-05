@@ -33,7 +33,8 @@
 		"webpack": "^4.29.6",
 		"webpack-cli": "^3.2.3",
 		"webpack-dev-server": "^3.2.1",
-		"webpack-merge": "^4.2.1"
+		"webpack-merge": "^4.2.1",
+		"compression-webpack-plugin": "^8.0.1"
 	},
 	"devDependencies": {
 		"gh-pages": "^3.2.3",

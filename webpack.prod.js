@@ -1,4 +1,3 @@
-const path = require("path");
 const common = require("./webpack.common");
 const merge = require("webpack-merge");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
@@ -7,6 +6,7 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 const paths = require("./paths");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = merge(common, {
 	mode: "production",
@@ -116,10 +116,18 @@ module.exports = merge(common, {
 		],
 	},
 	plugins: [
+		new CompressionPlugin({
+			algorithm: "gzip",
+			minRatio: 0.8,
+			filename: "[path][base].gz",
+			test: /\.(js|css|html|svg|png|jpe?g|gif)$/,
+			deleteOriginalAssets: true,
+		}),
 		new MiniCssExtractPlugin({
 			filename: "styles/[name].[contentHash].css",
 			chunkFilename: "[id].css",
 		}),
+		new CleanWebpackPlugin(),
 	],
 	module: {
 		rules: [

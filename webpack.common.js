@@ -10,7 +10,7 @@ module.exports = {
 	plugins: [
 		new WorkboxWebpackPlugin.InjectManifest({
 			swSrc: "./src/service-worker.js",
-			swDest: "sw.js",
+			swDest: "service-worker.js",
 			include: [/\.html$/, /\.js$/, /\.css$/, /\.woff2$/, /\.jpg$/, /\.png$/],
 		}),
 	],

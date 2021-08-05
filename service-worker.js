@@ -1,4 +1,4 @@
-importScripts("precache-manifest.a82d940c006d0e854ac25680f2ec77ab.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("precache-manifest.c4120907efcf168d25f52d4344239e88.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
 //?We’ll need update the service worker file and handle the SKIP_WAITING event such that it calls the skipWaiting:
@@ -8,16 +8,16 @@ addEventListener("message", (event) => {
 	}
 });
 
-const staticDevCoffee = "chetan-jain-portfolio";
-const assets = ["/", "/template.html", "/0.css", "/imgs/*"];
+// const staticDevCoffee = "chetan-jain-portfolio";
+// const assets = ["/", "/template.html", "/0.css", "/imgs/*"];
 
-self.addEventListener("install", (installEvent) => {
-	installEvent.waitUntil(
-		caches.open(staticDevCoffee).then((cache) => {
-			cache.addAll(assets);
-		})
-	);
-});
+// self.addEventListener("install", (installEvent) => {
+// 	installEvent.waitUntil(
+// 		caches.open(staticDevCoffee).then((cache) => {
+// 			cache.addAll(assets);
+// 		})
+// 	);
+// });
 
 //? This will set up dynamic caching for any request URL that matches the URL https://api.exchangeratesapi.io/latest.
 // workbox.routing.registerRoute(

@@ -1,4 +1,4 @@
-importScripts("precache-manifest.89febb0d4a9eaf05e909b72328c2d058.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("precache-manifest.72c1ec690a2fde2ea17398bcc6d92b94.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
 //?We’ll need update the service worker file and handle the SKIP_WAITING event such that it calls the skipWaiting:

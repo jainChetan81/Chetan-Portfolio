@@ -12,7 +12,6 @@ module.exports = {
 			swSrc: "./src/service-worker.js",
 			swDest: "sw.js",
 			include: [/\.html$/, /\.js$/, /\.css$/, /\.woff2$/, /\.jpg$/, /\.png$/],
-			maximumFileSizeToCacheInBytes: 100 * 1024 * 1024,
 		}),
 	],
 	module: {

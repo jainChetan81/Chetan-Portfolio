@@ -1,0 +1,59 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],[
+/* 0 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _styles_index_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_styles_index_scss__WEBPACK_IMPORTED_MODULE_0__);
+
+const element = document.getElementById("body");
+const themeDots = document.getElementsByClassName("theme-dot");
+const theme = sessionStorage.getItem("theme");
+if (theme == null) {
+	setTheme("light");
+} else {
+	setTheme(theme);
+}
+for (let i = 0; themeDots.length > i; i++) {
+	if (themeDots)
+		themeDots[i].addEventListener("click", function () {
+			setTheme(this.dataset.mode);
+		});
+}
+
+function setTheme(mode) {
+	if (mode == "light") element.className = "light_theme";
+	if (mode == "blue") element.className = "blue_theme";
+	if (mode == "green") element.className = "green_theme";
+	if (mode == "purple") element.className = "purple_theme";
+	sessionStorage.setItem("theme", mode);
+}
+
+if ("serviceWorker" in navigator) {
+	window.addEventListener("load", () => {
+		navigator.serviceWorker
+			.register("/service-worker.js")
+			.then((registration) => {
+				console.log("SW registered: ", registration);
+			})
+			.catch((registrationError) => {
+				console.log("SW registration failed: ", registrationError);
+			});
+	});
+}
+
+// TODO:add email functonality and add a popup when email is sent
+//TODO: add a carousel for projects showcase
+//TODO:PWA
+//TODO: pdf download button working
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ })
+],[[0,1]]]);

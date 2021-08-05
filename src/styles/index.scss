@@ -1,4 +1,16 @@
-$primary: teal;
-$danger: purple;
+@font-face {
+	font-family: "Roboto Mono", monospace;
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("../fonts/RobotoMono-Medium.ttf");
+}
+@font-face {
+	font-family: "Russo One", sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("../fonts/RussoOne-Regular.ttf");
+}
 @import "themes";
 @import "main";

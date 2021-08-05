@@ -1,12 +1,12 @@
+// FIXME: change px to rem
+//TODO: add background particle effects with p5.js
+
 html,
 body {
 	padding: 0;
 	margin: 0;
 	scroll-behavior: smooth;
-}
-
-body * {
-	transition: 0.3s;
+	font-family: "Roboto Mono", monospace;
 }
 
 h1,
@@ -19,6 +19,10 @@ strong {
 	color: var(--mainText);
 	font-family: "Russo One", sans-serif;
 	font-weight: 500;
+	transition: 0.3s;
+}
+img {
+	transition: 0.3s;
 }
 
 p,
@@ -28,7 +32,6 @@ label,
 input,
 textarea {
 	color: var(--secondaryText);
-	font-family: "Roboto Mono", monospace;
 }
 
 a {
@@ -42,6 +45,7 @@ ul {
 
 h1 {
 	font-size: 56px;
+	font-weight: 700;
 }
 
 h2 {
@@ -92,8 +96,6 @@ h6 {
 	background-color: var(--secondaryColor);
 	border: 1px solid var(--borderColor);
 	border-radius: 5px 5px 0 0;
-	-webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 	box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -108,10 +110,6 @@ h6 {
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--mainColor);
-}
-
-#navigation a {
-	color: var(--mainText);
 }
 
 #navigation {
@@ -148,8 +146,6 @@ h6 {
 	width: 15px;
 	border-radius: 50%;
 	margin: 5px;
-	-webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 	box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 }
 
@@ -179,8 +175,6 @@ h6 {
 	border-radius: 50%;
 	margin: 5px;
 	border: 2px solid var(--themeDotBorder);
-	-webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 	box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 	cursor: pointer;
 }
@@ -286,9 +280,6 @@ h6 {
 	align-content: center;
 	text-align: center;
 }
-.social-links a {
-	color: var(--secondaryText) !important;
-}
 
 #social_img {
 	width: 100%;
@@ -299,12 +290,11 @@ h6 {
 	grid-template-columns: repeat(auto-fit, 320px);
 	gap: 20px;
 	justify-content: center;
+	align-items: stretch;
 	padding-bottom: 50px;
 }
 
 .post {
-	-webkit-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
 	box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
 }
 
@@ -365,8 +355,8 @@ h6 {
 	width: 100%;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	color: #fff;
 	background-color: var(--previewShadow);
+	color: var(--secondaryText);
 	border: none;
 	border-radius: 5px;
 }

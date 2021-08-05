@@ -12,9 +12,13 @@ module.exports = merge(common, {
 	mode: "production",
 	output: {
 		filename: "[name].[contentHash].bundle.js",
-		path: path.resolve(__dirname, "build"),
+		path: paths.build,
 	},
 	optimization: {
+		minimize: true,
+		runtimeChunk: {
+			name: "runtime",
+		},
 		minimizer: [
 			new OptimizeCssAssetsPlugin(),
 			new TerserPlugin(),
@@ -29,6 +33,7 @@ module.exports = merge(common, {
 					collapseWhitespace: true,
 					removeComments: true,
 				},
+				cache: true,
 			}),
 			new HtmlWebpackPlugin({
 				title: "Burger Builder",
@@ -41,6 +46,7 @@ module.exports = merge(common, {
 					collapseWhitespace: true,
 					removeComments: true,
 				},
+				cache: true,
 			}),
 			new HtmlWebpackPlugin({
 				title: "Covid19 Tracker",
@@ -53,6 +59,7 @@ module.exports = merge(common, {
 					collapseWhitespace: true,
 					removeComments: true,
 				},
+				cache: true,
 			}),
 			new HtmlWebpackPlugin({
 				title: "Slack Clone",
@@ -65,6 +72,7 @@ module.exports = merge(common, {
 					collapseWhitespace: true,
 					removeComments: true,
 				},
+				cache: true,
 			}),
 			new HtmlWebpackPlugin({
 				title: "Ecommerce Website",
@@ -77,6 +85,7 @@ module.exports = merge(common, {
 					collapseWhitespace: true,
 					removeComments: true,
 				},
+				cache: true,
 			}),
 			new HtmlWebpackPlugin({
 				title: "Survey Website",
@@ -89,6 +98,7 @@ module.exports = merge(common, {
 					collapseWhitespace: true,
 					removeComments: true,
 				},
+				cache: true,
 			}),
 			new HtmlWebpackPlugin({
 				title: "News Website",
@@ -101,12 +111,15 @@ module.exports = merge(common, {
 					collapseWhitespace: true,
 					removeComments: true,
 				},
+				cache: true,
 			}),
 		],
 	},
 	plugins: [
-		new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
-		new CleanWebpackPlugin(),
+		new MiniCssExtractPlugin({
+			filename: "styles/[name].[contentHash].css",
+			chunkFilename: "[id].css",
+		}),
 	],
 	module: {
 		rules: [

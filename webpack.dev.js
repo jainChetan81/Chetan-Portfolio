@@ -6,7 +6,7 @@ const paths = require("./paths");
 module.exports = merge(common, {
 	mode: "development",
 	output: {
-		filename: "[name].bundle.js",
+		filename: "[name].[contentHash].bundle.js",
 		path: paths.build,
 	},
 	plugins: [

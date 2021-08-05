@@ -21,3 +21,7 @@ function setTheme(mode) {
 	if (mode == "purple") element.className = "purple_theme";
 	sessionStorage.setItem("theme", mode);
 }
+// TODO:add email functonality and add a popup when email is sent
+//TODO: add a carousel for projects showcase
+//TODO:PWA
+//TODO: pdf download button working

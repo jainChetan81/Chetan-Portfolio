@@ -3,22 +3,24 @@
 <html dir="ltr" lang="en">
 	<head>
 		<title>Chetan Portfolio</title>
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta
+			content="width=device-width, initial-scale=1,maximum-scale=5, user-scalable=yes"
+			name="viewport"
+		/>
 		<meta charset="utf-8" />
 		<meta content="A portfolio website for Chetan Jain" name="description" />
 		<!-- To run web application in full-screen -->
 		<meta content="yes" name="apple-mobile-web-app-capable" />
 		<meta content="white" name="apple-mobile-web-app-status-bar-style" />
-		<meta http-equiv="Cache-control" content="no-cache" />
+
+		<meta http-equiv="Cache-control" content="public" max-age="3600" must-revalidate />
+		<meta name="google" content="notranslate" />
+		<meta name="google" content="nopagereadaloud" />
 		<link
 			rel="stylesheet"
 			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 			crossorigin="anonymous"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
-			rel="stylesheet"
 		/>
 	</head>
 
@@ -254,7 +256,9 @@
 									An online portal for Creating and sending your own surveys with
 									stripe integration
 								</p>
-								<a href="emaily.html">Read More</a>
+								<a aria-label="Chetan Emaily Project" href="emaily.html"
+									>Read More</a
+								>
 							</div>
 						</div>
 					</div>
@@ -300,7 +304,7 @@
 									An online portal for customizable News Feed with realtime search
 									option
 								</p>
-								<a href="news.html">Read More</a>
+								<a aria-label="Chetan News Project" href="news.html">Read More</a>
 							</div>
 						</div>
 					</div>
@@ -337,24 +341,43 @@
 				<h3 style="text-align: center">Get In Touch</h3>
 
 				<form id="contact-form" name="contact-form">
-					<label>Name</label>
-					<input class="input-field" name="name" placeholder="Chetan Jain" type="text" />
-					<label>Subject</label>
-					<input class="input-field" name="subject" placeholder="Subject" type="text" />
-					<label>Email</label>
+					<label for="name">Name</label>
 					<input
+						id="name"
+						class="input-field"
+						name="name"
+						placeholder="Chetan Jain"
+						type="text"
+						autofocus
+						required
+					/>
+					<label for="subject">Subject</label>
+					<input
+						id="subject"
+						class="input-field"
+						name="subject"
+						placeholder="Subject"
+						type="text"
+					/>
+					<label for="email">Email</label>
+					<input
+						id="email"
 						class="input-field"
 						name="email"
 						placeholder="jain.cj.chetan@gmail.com"
 						type="email"
+						required
 					/>
-					<label>Message</label>
+					<label for="message">Message</label>
 
 					<textarea
+						id="message"
 						class="input-field"
 						name="message"
-						placeholder="Message"
+						placeholder="Write you Email Message here"
 						rows="3"
+						spellcheck="true"
+						required
 					></textarea>
 					<input id="submit-btn" type="submit" value="Send" aria-label="Send" />
 				</form>

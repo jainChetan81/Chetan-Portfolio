@@ -22,15 +22,18 @@ function setTheme(mode) {
 	sessionStorage.setItem("theme", mode);
 }
 
-// const styleSheetLink = document.createElement("link");
-// styleSheetLink.rel = "stylesheet";
-// styleSheetLink.href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css";
-// styleSheetLink.integrity =
-// 	"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm";
-// styleSheetLink.crossOrigin = "anonymous";
-// styleSheetLink.type = "text/css";
-// const godefer = document.getElementsByTagName("link")[0];
-// godefer.parentNode.insertBefore(styleSheetLink, godefer);
+if ("serviceWorker" in navigator) {
+	window.addEventListener("load", () => {
+		navigator.serviceWorker
+			.register("/service-worker.js")
+			.then((registration) => {
+				console.log("SW registered: ", registration);
+			})
+			.catch((registrationError) => {
+				console.log("SW registration failed: ", registrationError);
+			});
+	});
+}
 
 // TODO:add email functonality and add a popup when email is sent
 //TODO: add a carousel for projects showcase

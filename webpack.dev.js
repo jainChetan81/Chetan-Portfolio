@@ -13,7 +13,7 @@ module.exports = merge(common, {
 		new HtmlWebpackPlugin({
 			title: "Chetan's Portfolio",
 			favicon: paths.src + "/images/ChetanId.jpg",
-			template: paths.src + "/template.html", // template file
+			template: paths.src + "/index.html", // template file
 			filename: "index.html", // output file
 			inject: true,
 		}),

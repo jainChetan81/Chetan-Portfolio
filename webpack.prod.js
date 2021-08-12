@@ -23,7 +23,7 @@ module.exports = merge(common, {
 			new OptimizeCssAssetsPlugin(),
 			new TerserPlugin(),
 			new HtmlWebpackPlugin({
-				template: "./src/template.html",
+				template: "./src/index.html",
 				title: "Chetan's Portfolio",
 				favicon: paths.src + "/images/ChetanId.jpg",
 				filename: "index.html", // output file

@@ -54,7 +54,7 @@ h1 {
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	margin: 0.7rem;
 }
 
@@ -372,6 +372,9 @@ h6 {
 	color: var(--secondaryText);
 	border: none;
 	border-radius: 5px;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 @media screen and (max-width: 1200px) {

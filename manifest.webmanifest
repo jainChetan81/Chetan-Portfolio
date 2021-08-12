@@ -2,7 +2,7 @@
 	"name": "Chetan Portfolio",
 	"short_name": "chetan-portfolio",
 	"start_url": "index.html",
-	"display": "portfolio",
+	"display": "standalone",
 	"background_color": "#fdfdfd",
 	"theme_color": "#db4938",
 	"orientation": "portrait-primary",

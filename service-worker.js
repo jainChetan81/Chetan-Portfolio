@@ -1,4 +1,4 @@
-importScripts("precache-manifest.2db77551f81c8dbfba4b7b61a0285c65.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("precache-manifest.ecf4af2a8b577564e30c4632f668ebb4.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 if ("workbox" in self) {
 	workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
@@ -10,7 +10,7 @@ addEventListener("message", (event) => {
 	}
 });
 const staticDevCoffee = "CHETAN PORTFOLIO";
-const assets = ["/", "/template.html", "/styles/*", "/index.js", "/images/*"];
+const assets = ["/", "/index.html", "/styles/*", "/index.js", "/images/*"];
 self.addEventListener("install", (installEvent) => {
 	installEvent.waitUntil(
 		caches.open(staticDevCoffee).then((cache) => {
@@ -25,17 +25,4 @@ self.addEventListener("fetch", (fetchEvent) => {
 		})
 	);
 });
-
-//? This will set up dynamic caching for any request URL that matches the URL https://api.exchangeratesapi.io/latest.
-// workbox.routing.registerRoute(
-//     /https:\/\/api\.exchangeratesapi\.io\/latest/,
-//     new workbox.strategies.NetworkFirst({
-//       cacheName: "currencies",
-//       plugins: [
-//         new workbox.expiration.Plugin({
-//           maxAgeSeconds: 10 * 60 // 10 minutes
-//         })
-//       ]
-//     })
-//   );}
 

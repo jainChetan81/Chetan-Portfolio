@@ -1,11 +1,27 @@
-importScripts("precache-manifest.165f2ed24c61d47f84b429f4882a18c4.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("precache-manifest.a1a8195530db72e3a75e5787a84b9d51.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
-workbox.precaching.precacheAndRoute(self.__precacheManifest);
-//?We’ll need update the service worker file and handle the SKIP_WAITING event such that it calls the skipWaiting:
-addEventListener("message", (event) => {
-	if (event.data && event.data.type === "SKIP_WAITING") {
-		skipWaiting();
-	}
+// workbox.precaching.precacheAndRoute(self.__precacheManifest);
+// //?We’ll need update the service worker file and handle the SKIP_WAITING event such that it calls the skipWaiting:
+// addEventListener("message", (event) => {
+// 	if (event.data && event.data.type === "SKIP_WAITING") {
+// 		skipWaiting();
+// 	}
+// });
+const staticDevCoffee = "CHETAN PORTFOLIO";
+const assets = ["/", "/template.html", "/styles/*", "/index.js", "/images/*"];
+self.addEventListener("install", (installEvent) => {
+	installEvent.waitUntil(
+		caches.open(staticDevCoffee).then((cache) => {
+			cache.addAll(assets);
+		})
+	);
+});
+self.addEventListener("fetch", (fetchEvent) => {
+	fetchEvent.respondWith(
+		caches.match(fetchEvent.request).then((res) => {
+			return res || fetch(fetchEvent.request);
+		})
+	);
 });
 
 //? This will set up dynamic caching for any request URL that matches the URL https://api.exchangeratesapi.io/latest.

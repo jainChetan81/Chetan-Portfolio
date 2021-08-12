@@ -13,49 +13,49 @@ module.exports = merge(common, {
 		new HtmlWebpackPlugin({
 			title: "Chetan's Portfolio",
 			favicon: paths.src + "/images/ChetanId.jpg",
-			template: paths.src + "/index.html", // template file
+			template: paths.src + "/index.html",
 			filename: "index.html", // output file
 			inject: true,
 		}),
 		new HtmlWebpackPlugin({
 			title: "Burger Builder",
 			favicon: paths.src + "/images/ChetanId.jpg",
-			template: paths.src + "/project/burger.html", // template file
+			template: paths.src + "/project/burger.html",
 			filename: "burger.html", // output file
 			inject: true,
 		}),
 		new HtmlWebpackPlugin({
 			title: "Covid19 Tracker",
 			favicon: paths.src + "/images/ChetanId.jpg",
-			template: paths.src + "/project/covid19.html", // template file
+			template: paths.src + "/project/covid19.html",
 			filename: "covid19.html", // output file
 			inject: true,
 		}),
 		new HtmlWebpackPlugin({
 			title: "Slack Clone",
 			favicon: paths.src + "/images/ChetanId.jpg",
-			template: paths.src + "/project/devchat.html", // template file
+			template: paths.src + "/project/devchat.html",
 			filename: "devchat.html", // output file
 			inject: true,
 		}),
 		new HtmlWebpackPlugin({
 			title: "Ecommerce Website",
 			favicon: paths.src + "/images/ChetanId.jpg",
-			template: paths.src + "/project/ecommerce.html", // template file
+			template: paths.src + "/project/ecommerce.html",
 			filename: "ecommerce.html", // output file
 			inject: true,
 		}),
 		new HtmlWebpackPlugin({
 			title: "Survey Website",
 			favicon: paths.src + "/images/ChetanId.jpg",
-			template: paths.src + "/project/emaily.html", // template file
+			template: paths.src + "/project/emaily.html",
 			filename: "emaily.html", // output file
 			inject: true,
 		}),
 		new HtmlWebpackPlugin({
 			title: "News Website",
 			favicon: paths.src + "/images/ChetanId.jpg",
-			template: paths.src + "/project/news.html", // template file
+			template: paths.src + "/project/news.html",
 			filename: "news.html", // output file
 			inject: true,
 		}),

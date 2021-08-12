@@ -23,16 +23,3 @@ self.addEventListener("fetch", (fetchEvent) => {
 		})
 	);
 });
-
-//? This will set up dynamic caching for any request URL that matches the URL https://api.exchangeratesapi.io/latest.
-// workbox.routing.registerRoute(
-//     /https:\/\/api\.exchangeratesapi\.io\/latest/,
-//     new workbox.strategies.NetworkFirst({
-//       cacheName: "currencies",
-//       plugins: [
-//         new workbox.expiration.Plugin({
-//           maxAgeSeconds: 10 * 60 // 10 minutes
-//         })
-//       ]
-//     })
-//   );}

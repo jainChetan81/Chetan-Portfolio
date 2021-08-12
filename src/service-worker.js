@@ -1,10 +1,12 @@
-// workbox.precaching.precacheAndRoute(self.__precacheManifest);
-// //?We’ll need update the service worker file and handle the SKIP_WAITING event such that it calls the skipWaiting:
-// addEventListener("message", (event) => {
-// 	if (event.data && event.data.type === "SKIP_WAITING") {
-// 		skipWaiting();
-// 	}
-// });
+if ("workbox" in self) {
+	workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+}
+//?We’ll need update the service worker file and handle the SKIP_WAITING event such that it calls the skipWaiting:
+addEventListener("message", (event) => {
+	if (event.data && event.data.type === "SKIP_WAITING") {
+		skipWaiting();
+	}
+});
 const staticDevCoffee = "CHETAN PORTFOLIO";
 const assets = ["/", "/template.html", "/styles/*", "/index.js", "/images/*"];
 self.addEventListener("install", (installEvent) => {
@@ -33,4 +35,4 @@ self.addEventListener("fetch", (fetchEvent) => {
 //         })
 //       ]
 //     })
-//   );
+//   );}

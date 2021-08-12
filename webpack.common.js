@@ -1,4 +1,5 @@
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	entry: {
@@ -13,6 +14,9 @@ module.exports = {
 			swDest: "service-worker.js",
 			include: [/\.html$/, /\.js$/, /\.css$/],
 			// include: [/\.html$/, /\.js$/, /\.css$/, /\.woff2$/, /\.jpg$/, /\.png$/],
+		}),
+		new CopyWebpackPlugin([{ from: "src/images", to: "imgs/" }, "src/manifest.webmanifest"], {
+			ignore: [".DS_Store"],
 		}),
 	],
 	module: {

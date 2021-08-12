@@ -41,6 +41,7 @@
 	},
 	"devDependencies": {
 		"gh-pages": "^3.2.3",
-		"hint": "^6.1.4"
+		"hint": "^6.1.4",
+		"source-map-loader": "^1.0.0"
 	}
 }

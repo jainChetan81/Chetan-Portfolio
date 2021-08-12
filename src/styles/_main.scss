@@ -1,6 +1,6 @@
-// FIXME: change px to rem
-//TODO: add background particle effects with p5.js
-
+* {
+	box-sizing: border-box;
+}
 html,
 body {
 	padding: 0;
@@ -268,7 +268,7 @@ h6 {
 
 .about-wrapper {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minimax(320px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 	padding-bottom: 50px;
 	padding-top: 50px;
 	gap: 100px;

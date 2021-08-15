@@ -5,7 +5,7 @@ const element = document.getElementById("body");
 const themeDots = document.getElementsByClassName("theme-dot");
 const theme = sessionStorage.getItem("theme");
 if (theme == null) {
-	setTheme("light");
+	setTheme("purple");
 } else {
 	setTheme(theme);
 }

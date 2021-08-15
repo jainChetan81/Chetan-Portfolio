@@ -10,26 +10,26 @@
 	"description": "CHetan Portfolio for Full STack Development",
 	"screenshots": [
 		{
-			"src": "./ChetanId.jpg",
+			"src": "images/ChetanId.jpg",
 			"type": "image/jpg",
 			"sizes": "200x200"
 		}
 	],
 	"icons": [
 		{
-			"src": "./ChetanId.jpg",
+			"src": "images/ChetanId.jpg",
 			"type": "image/jpg",
 			"sizes": "200x200",
 			"purpose": "any maskable"
 		},
 		{
-			"src": "./maskable_icon.png",
+			"src": "images/maskable_icon.png",
 			"type": "image/png",
 			"sizes": "192x192",
 			"purpose": "maskable"
 		},
 		{
-			"src": "./follow.png",
+			"src": "images/follow.png",
 			"type": "image/png",
 			"sizes": "512x512",
 			"purpose": "maskable"

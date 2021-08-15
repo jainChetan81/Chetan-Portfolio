@@ -3,13 +3,36 @@
 	"short_name": "chetan-portfolio",
 	"start_url": "index.html",
 	"display": "standalone",
+	"scope": "/",
 	"background_color": "#eaeaea",
 	"theme_color": "#c1c1c1",
 	"orientation": "portrait-primary",
+	"description": "Weather forecast information",
+	"screenshots": [
+		{
+			"src": "/ChetanId.jpg",
+			"type": "image/jpg",
+			"sizes": "200x200"
+		}
+	],
 	"icons": [
 		{
-			"src": "/images/ChetanId.jpg",
-			"type": "image/jpg"
+			"src": "/ChetanId.jpg",
+			"type": "image/jpg",
+			"sizes": "200x200",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/maskable_icon.png",
+			"type": "image/png",
+			"sizes": "192x192",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/follow.png",
+			"type": "image/png",
+			"sizes": "512x512",
+			"purpose": "maskable"
 		}
 	]
 }

@@ -8,7 +8,7 @@ addEventListener("message", (event) => {
 	}
 });
 const staticDevCoffee = "CHETAN PORTFOLIO";
-const assets = ["/", "/index.html", "/styles/*", "/index.js", "/images/*"];
+const assets = ["/", "/index.html", "/styles/*", "/index.js", "/images"];
 self.addEventListener("install", (installEvent) => {
 	installEvent.waitUntil(
 		caches.open(staticDevCoffee).then((cache) => {

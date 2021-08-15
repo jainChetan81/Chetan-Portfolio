@@ -15,7 +15,7 @@ module.exports = {
 			include: [/\.html$/, /\.js$/, /\.css$/],
 			// include: [/\.html$/, /\.js$/, /\.css$/, /\.woff2$/, /\.jpg$/, /\.png$/],
 		}),
-		new CopyWebpackPlugin([{ from: "src/images", to: "imgs/" }, "src/manifest.webmanifest"], {
+		new CopyWebpackPlugin([{ from: "src/images", to: "images/" }, "src/manifest.json"], {
 			ignore: [".DS_Store"],
 		}),
 	],
@@ -49,7 +49,7 @@ module.exports = {
 						loader: "file-loader",
 						options: {
 							name: "[name].[hash].[ext]",
-							outputPath: "imgs",
+							outputPath: "images",
 						},
 					},
 					{

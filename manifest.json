@@ -1,9 +1,9 @@
 {
 	"name": "Chetan Portfolio",
 	"short_name": "chetan-portfolio",
-	"start_url": "/",
+	"start_url": "/Chetan-Portfolio/",
 	"display": "standalone",
-	"scope": "/Chetan-Portfolio",
+	"scope": "/",
 	"background_color": "#eaeaea",
 	"theme_color": "#c1c1c1",
 	"orientation": "portrait-primary",

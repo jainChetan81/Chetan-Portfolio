@@ -1,4 +1,4 @@
-importScripts("precache-manifest.3409fa61850936d3eaca981842b67b6a.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("precache-manifest.df37e18fc21aa970d6922fe7fb53287b.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 // if ("workbox" in self) {
 // 	workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
@@ -10,7 +10,7 @@ importScripts("precache-manifest.3409fa61850936d3eaca981842b67b6a.js", "https://
 // 	}
 // });
 const staticDevCoffee = "Chetan Portfolio";
-const assets = ["/", "/index.html", "/0.css", "/images"];
+const assets = ["/", "/index.html", "/0.css", "/ChetanId.jpg", "images/maskable_icon.png"];
 self.addEventListener("install", (installEvent) => {
 	installEvent.waitUntil(
 		caches.open(staticDevCoffee).then((cache) => {

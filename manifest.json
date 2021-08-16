@@ -1,16 +1,16 @@
 {
 	"name": "Chetan Portfolio",
 	"short_name": "chetan-portfolio",
-	"start_url": "index.html",
+	"start_url": "/",
 	"display": "standalone",
-	"scope": "/",
+	"scope": "/Chetan-Portfolio",
 	"background_color": "#eaeaea",
 	"theme_color": "#c1c1c1",
 	"orientation": "portrait-primary",
-	"description": "CHetan Portfolio for Full STack Development",
+	"description": "Chetan Portfolio for Full Stack Development",
 	"screenshots": [
 		{
-			"src": "images/ChetanId.jpg",
+			"src": "./images/ChetanId.jpg",
 			"type": "image/jpg",
 			"sizes": "200x200"
 		}
@@ -19,20 +19,12 @@
 		{
 			"src": "images/ChetanId.jpg",
 			"type": "image/jpg",
-			"sizes": "200x200",
-			"purpose": "any maskable"
-		},
-		{
-			"src": "images/maskable_icon.png",
-			"type": "image/png",
-			"sizes": "192x192",
-			"purpose": "maskable"
+			"sizes": "200x200"
 		},
 		{
 			"src": "images/follow.png",
 			"type": "image/png",
-			"sizes": "512x512",
-			"purpose": "maskable"
+			"sizes": "512x512"
 		}
 	]
 }

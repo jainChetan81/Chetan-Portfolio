@@ -1,4 +1,4 @@
-importScripts("precache-manifest.4d9acf163722c43ee614a2cf6b291ab9.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("precache-manifest.b2b037037f93cb1d6da3746c923ce2a4.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 if ("workbox" in self) {
 	workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
@@ -9,7 +9,7 @@ addEventListener("message", (event) => {
 		skipWaiting();
 	}
 });
-const staticDevCoffee = "CHETAN PORTFOLIO";
+const staticDevCoffee = "Chetan Portfolio";
 const assets = ["/", "/index.html", "/styles/*", "/index.js", "/images"];
 self.addEventListener("install", (installEvent) => {
 	installEvent.waitUntil(

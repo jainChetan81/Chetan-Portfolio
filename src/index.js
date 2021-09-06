@@ -1,11 +1,12 @@
 import emailjs, { init } from "emailjs-com";
 import "./styles/index.scss";
 init("user_NCbfVxwteUNCBS2cFVtK0");
+
 const element = document.getElementById("body");
 const themeDots = document.getElementsByClassName("theme-dot");
 const theme = sessionStorage.getItem("theme");
 if (theme == null) {
-	setTheme("purple");
+	setTheme("light");
 } else {
 	setTheme(theme);
 }

@@ -1,13 +1,13 @@
 {
 	"name": "Chetan Portfolio",
 	"short_name": "chetan-portfolio",
-	"start_url": "index.html",
+	"start_url": "/Chetan-Portfolio/",
 	"display": "standalone",
-	"scope": "/",
+	"scope": "/Chetan-Portfolio/",
 	"background_color": "#eaeaea",
 	"theme_color": "#c1c1c1",
 	"orientation": "portrait-primary",
-	"description": "CHetan Portfolio for Full STack Development",
+	"description": "Chetan Portfolio for Full Stack Development",
 	"screenshots": [
 		{
 			"src": "/ChetanId.jpg",

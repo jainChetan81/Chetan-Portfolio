@@ -1,28 +1,34 @@
-importScripts("precache-manifest.0583918828b75e814dcfb3042699f25b.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
 
-if ("workbox" in self) {
-	workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
-}
-// ?We’ll need update the service worker file and handle the SKIP_WAITING event such that it calls the skipWaiting:
-addEventListener("message", (event) => {
-	if (event.data && event.data.type === "SKIP_WAITING") {
-		skipWaiting();
-	}
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+
+importScripts(
+  "precache-manifest.614768e2b4aaff0cc494f68faa31cc03.js"
+);
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
-const staticDevCoffee = "Chetan Portfolio";
-const assets = ["/", "/index.html", "/0.css", "/ChetanId.jpg", "images/maskable_icon.png"];
-// self.addEventListener("install", (installEvent) => {
-// 	installEvent.waitUntil(
-// 		caches.open(staticDevCoffee).then((cache) => {
-// 			cache.addAll(assets);
-// 		})
-// 	);
-// });
-// self.addEventListener("fetch", (fetchEvent) => {
-// 	fetchEvent.respondWith(
-// 		caches.match(fetchEvent.request).then((res) => {
-// 			return res || fetch(fetchEvent.request);
-// 		})
-// 	);
-// });
 
+/**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
+self.__precacheManifest = [].concat(self.__precacheManifest || []);
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|svg)$/, new workbox.strategies.CacheFirst({ "cacheName":"images", plugins: [new workbox.expiration.Plugin({ maxEntries: 10, purgeOnQuotaError: false })] }), 'GET');

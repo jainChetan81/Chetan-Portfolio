@@ -20,7 +20,6 @@
 	"dependencies": {
 		"clean-webpack-plugin": "^2.0.0",
 		"compression-webpack-plugin": "v1.1.12 ",
-		"copy-webpack-plugin": "^5.1.1",
 		"css-loader": "^2.1.0",
 		"emailjs-com": "^3.2.0",
 		"file-loader": "^3.0.1",
@@ -41,6 +40,7 @@
 		"workbox-window": "^4.3.1"
 	},
 	"devDependencies": {
+		"copy-webpack-plugin": "^5.1.2",
 		"gh-pages": "^3.2.3",
 		"hint": "^6.1.4",
 		"source-map-loader": "^1.0.0"

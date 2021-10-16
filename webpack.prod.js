@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const paths = require("./paths");
 const CompressionPlugin = require("compression-webpack-plugin");
 
@@ -123,6 +124,15 @@ module.exports = merge(common, {
 		// 	test: /\.(js|css|html|svg|)$/,
 		// 	deleteOriginalAssets: true,
 		// }),
+		module.exports = {
+			plugins: [
+			  new CopyPlugin([
+				{ from: 'source', to: 'build' },
+				{ from: 'other', to: 'public' },
+				{ from: 'src/robots.txt', to: 'robots.txt' }
+			  ]),
+			],
+		  }
 		new MiniCssExtractPlugin({
 			filename: "styles/[name].[contentHash].css",
 			chunkFilename: "[id].css",

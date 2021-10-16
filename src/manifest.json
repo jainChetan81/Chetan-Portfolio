@@ -4,10 +4,10 @@
 	"background_color": "#eaeaea",
 	"theme_color": "#c1c1c1",
 	"display": "standalone",
-	"scope": "/",
+	"scope": "/Chetan-Portfolio/",
 	"lang": "en-US",
 	"orientation": "any",
-	"start_url": "/",
+	"start_url": "/Chetan-Portfolio/",
 	"description": "Chetan Portfolio for Full Stack Development",
 	"screenshots": [
 		{

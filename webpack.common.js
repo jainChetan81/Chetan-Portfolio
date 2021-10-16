@@ -1,5 +1,6 @@
-const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
+// const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
 	entry: {
@@ -9,12 +10,37 @@ module.exports = {
 		runtimeChunk: "single",
 	},
 	plugins: [
-		new WorkboxWebpackPlugin.InjectManifest({
-			swSrc: "./src/service-worker.js",
-			swDest: "service-worker.js",
-			include: [/\.html$/, /\.js$/, /\.css$/],
-			// include: [/\.html$/, /\.js$/, /\.css$/, /\.woff2$/, /\.jpg$/, /\.png$/],
+		new WorkboxPlugin.GenerateSW({
+			// Do not precache images
+			exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+
+			// Define runtime caching rules.
+			runtimeCaching: [
+				{
+					// Match any request that ends with .png, .jpg, .jpeg or .svg.
+					urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+					// Apply a cache-first strategy.
+					handler: "CacheFirst",
+
+					options: {
+						// Use a custom cache name.
+						cacheName: "images",
+
+						// Only cache 10 images.
+						expiration: {
+							maxEntries: 10,
+						},
+					},
+				},
+			],
 		}),
+		// new WorkboxWebpackPlugin.InjectManifest({
+		// 	swSrc: "./src/service-worker.js",
+		// 	swDest: "service-worker.js",
+		// 	include: [/\.html$/, /\.js$/, /\.css$/],
+		// 	// include: [/\.html$/, /\.js$/, /\.css$/, /\.woff2$/, /\.jpg$/, /\.png$/],
+		// }),
 		new CopyWebpackPlugin([{ from: "src/images", to: "images/" }, "src/manifest.json"], {
 			ignore: [".DS_Store"],
 		}),

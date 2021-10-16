@@ -20,7 +20,8 @@
 		{
 			"src": "https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-192,h-192,f-png",
 			"sizes": "192x192",
-			"type": "image/png"
+			"type": "image/png",
+			"purpose": "maskable"
 		},
 		{
 			"src": "https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-256,h-256,f-png",
@@ -37,12 +38,7 @@
 			"sizes": "512x512",
 			"type": "image/png"
 		},
-		{
-			"src": "https://ik.imagekit.io/aqaseg5nkl6/portfolio/maskable_icon.png?tr=w-512,h-512,f-png",
-			"type": "image/png",
-			"sizes": "192x192",
-			"purpose": "maskable"
-		},
+
 		{
 			"src": "https://ik.imagekit.io/aqaseg5nkl6/portfolio/ChetanId.jpg?tr=w-512,h-512,f-png",
 			"type": "image/png",

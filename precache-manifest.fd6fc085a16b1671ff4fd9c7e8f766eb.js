@@ -12,11 +12,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./font/c17b42c9c464e83a7cd41303edff9a04.ttf"
   },
   {
-    "revision": "05e875cf2201faf21f5d",
+    "revision": "9864f809fdcb3baec955",
     "url": "0.css"
   },
   {
-    "revision": "05e875cf2201faf21f5d",
+    "revision": "9864f809fdcb3baec955",
     "url": "main.2b678c28b9a200ba47ec.bundle.js"
   },
   {

@@ -4,6 +4,10 @@
 }
 * {
 	box-sizing: border-box;
+	&:focus-within{
+		outline: none;
+		border: none;
+	}
 }
 html,
 body {
